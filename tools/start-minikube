@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cluster=postgresql-backup
+minikube delete -p "$cluster"
+minikube start -p "$cluster" --driver=docker --memory=8000 --cpus=5
+minikube profile "$cluster"
